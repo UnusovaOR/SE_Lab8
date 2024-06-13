@@ -28,7 +28,8 @@ def main(file_lines):
     data = {'пункт посадки': embarked, 'количество': count}
     st.dataframe(data)
     fig = plt.figure(figsize=(8, 3))
-    plt.bar(embarked, count)
+    bar_colors = ['red', 'green', 'blue']
+    plt.bar(embarked, count, color=bar_colors)
     plt.xlabel('пункт посадки')
     plt.ylabel('количество')
     plt.title(f'количество погибших детей в возрасте до {max_age} лет')
