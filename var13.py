@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import streamlit as st
 
+
 def get_count(lines, age):
     c = 0
     q = 0
@@ -16,9 +17,10 @@ def get_count(lines, age):
                 s = s + 1
     return c, q, s
 
+
 def main(file_lines):
-    st.write('Для подсчета количества погибших детей по каждому пункту посадки, '
-             'укажите максимальный возраст:')
+    st.write('Для подсчета количества погибших детей по каждому пункту '
+             'посадки, укажите максимальный возраст:')
     max_age = st.slider('максимальный возраст', 1, 18)
     c, q, s = get_count(file_lines, max_age)
     embarked = ['Шербур', 'Квинстаун', 'Саутгемптон']
